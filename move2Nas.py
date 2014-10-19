@@ -1,10 +1,18 @@
 #!/usr/bin/python
 """
 Usage: move2Nas.py [-h] [-destination_folder [DESTINATION_FOLDER]]
+                   [-proc_list [PROC_NAME [PROC_NAME ...]]]
                    [-logfile [LOGFILE]]
                    [-loglevel [{DEBUG,INFO,WARNING,ERROR,CRITICAL}]]
                    source_folder user password host
+
 The following arguments are required: source_folder, user, password, host
+(optional) -destination_folder: the relative path (from user's home folder) on the sftp server
+(optional) -proc_list: a list of processes that may be currently writing to the folder (& thus may have open files) --
+                     (the script will get a list of open files from these processes and skip trying to move those files)
+(optional) -logfile: the filename on the local system where a log of script actions and info will be written
+(optional) -loglevel: the level at which logging should occur (only relevant if -logfile is set)
+
 example:
 move2Nas.py "C:\Documents and Settings\James Wing\My Documents\My Pictures\Sheds" myuser mypassword DISKSTATION -df
   "photo" -proc_list iexplore.exe pythonw.exe -logfile "C:\Documents and Settings\James Wing\My Documents\move2NAS.log"
