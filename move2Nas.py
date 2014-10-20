@@ -48,8 +48,7 @@ def upload(file):
 
 def main(host, user, password, source_folder, destination_folder='', **kwargs):
     global s
-    writers = []
-    writers.extend(kwargs.get('proc_list'))  # append (extend) list of all processes that may have files open
+    writers = kwargs.get('proc_list')  # list of all processes that may have files open
 
     log = True if kwargs.get('loglevel') == 'DEBUG' else False  # to log the sftp connection itself {True or False}
 
@@ -166,7 +165,7 @@ if __name__ == "__main__":
     parser.add_argument('host', help='sftp server hostname or IP address (e.g. Diskstation or 192.168.0.55')
     parser.add_argument('-destination_folder', '-df', nargs='?', default='',
                         help='destination folder on remote sftp server (default: home_folder)')
-    parser.add_argument('-proc_list', '-pl', nargs='*', help='skip files open by these processes')
+    parser.add_argument('-proc_list', '-pl', nargs='*', default=[], help='skip files open by these processes')
     parser.add_argument('-logfile', '-lf', nargs='?', default='move2NAS.log',
                         help='name of file to log info and errors (default: move2NAS.log)')
     parser.add_argument('-loglevel', '-ll', nargs='?', choices=['DEBUG', 'INFO', 'WARNING', 'ERROR', 'CRITICAL'],
