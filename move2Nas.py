@@ -48,7 +48,8 @@ def upload(file):
 
 def main(host, user, password, source_folder, destination_folder='', **kwargs):
     global s
-    writers = kwargs.get('proc_list')  # list of all processes that may have files open
+    writers = []
+    writers.extend(kwargs.get('proc_list'))  # append (extend) list of all processes that may have files open
 
     log = True if kwargs.get('loglevel') == 'DEBUG' else False  # to log the sftp connection itself {True or False}
 
