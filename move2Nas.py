@@ -130,14 +130,22 @@ def main(host, user, password, source_folder, destination_folder='', **kwargs):
             print(emsg)
             logging.exception(emsg)
             raise  # bubble up the exception
+        error_count = 0  # let's count the errors in our upload iterations
         for target_file in upload_filelist:
             if os.path.isfile(target_file):
-                msg = 'moving file: {}'.format(target_file)
+                msg = 'Moving file: {}'.format(target_file)
                 print(msg)
                 logging.info(msg)
                 if upload(target_file):
-                    logging.info('deleting local file: {}'.format(target_file))
+                    logging.info('Deleting local file: {}'.format(target_file))
                     os.remove(target_file)  # delete local copy of file
+                else:
+                    error_count += error_count  #if upload failed, increment error_count
+                if error_count > 1:
+                    msg = 'Too many failures uploading.  Exiting.  Try again later.'
+                    print(msg)
+                    logging.info(msg)
+                    break
     finally:
         logging.info('closing sftp connection')
         s.close()
