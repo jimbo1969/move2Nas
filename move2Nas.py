@@ -140,7 +140,7 @@ def main(host, user, password, source_folder, destination_folder='', **kwargs):
                     logging.info('Deleting local file: {}'.format(target_file))
                     os.remove(target_file)  # delete local copy of file
                 else:
-                    error_count += error_count  #if upload failed, increment error_count
+                    error_count += 1  #if upload failed, increment error_count
                 if error_count > 1:
                     msg = 'Too many failures uploading.  Exiting.  Try again later.'
                     print(msg)
