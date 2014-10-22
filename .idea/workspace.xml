@@ -32,8 +32,8 @@
       <file leaf-file-name="move2Nas.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/move2Nas.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5086705" vertical-offset="2391" max-vertical-offset="3434">
-              <caret line="151" column="0" selection-start-line="151" selection-start-column="0" selection-end-line="151" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.17445482" vertical-offset="2511" max-vertical-offset="3400">
+              <caret line="151" column="26" selection-start-line="151" selection-start-column="26" selection-end-line="151" selection-end-column="26" />
               <folding>
                 <element signature="e#1176#1197#0" expanded="true" />
               </folding>
@@ -353,7 +353,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="move2Nas" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/move2Nas.py" />
-      <option name="PARAMETERS" value="&quot;C:\Documents and Settings\James Wing\My Documents\My Pictures\Sheds&quot;  pi raspberry DISKSTATION -df &quot;photo&quot; -proc_list iexplore.exe pythonw.exe -logfile &quot;C:\Documents and Settings\James Wing\My Documents\move2NAS.log&quot;" />
+      <option name="PARAMETERS" value="&quot;C:\Documents and Settings\James Wing\My Documents\My Pictures\Sheds&quot;  pi raspberry DISKSTATION -df &quot;photo&quot; -proc_list iexplore.exe pythonw.exe -logfile &quot;C:\Documents and Settings\James Wing\My Documents\move2NAS.log&quot; -loglevel=DEBUG" />
       <RunnerSettings RunnerId="PyDebugRunner" />
       <RunnerSettings RunnerId="PythonRunner" />
       <ConfigurationWrapper RunnerId="PyDebugRunner" />
@@ -386,7 +386,15 @@
       <created>1413766884546</created>
       <updated>1413766884546</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="break out of upload loop after two failures">
+      <created>1413943511703</created>
+      <updated>1413943511703</updated>
+    </task>
+    <task id="LOCAL-00005" summary="bugfix for break out of upload loop after two failures">
+      <created>1413950766156</created>
+      <updated>1413950766156</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -431,11 +439,13 @@
     <MESSAGE value="Added comments for usage." />
     <MESSAGE value="bugfix - proc_list truly optional now" />
     <MESSAGE value="bugfix - proc_list truly optional now, really" />
-    <option name="LAST_COMMIT_MESSAGE" value="bugfix - proc_list truly optional now, really" />
+    <MESSAGE value="break out of upload loop after two failures" />
+    <MESSAGE value="bugfix for break out of upload loop after two failures" />
+    <option name="LAST_COMMIT_MESSAGE" value="bugfix for break out of upload loop after two failures" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="40" />
+      <option name="time" value="42" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -789,8 +799,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/move2Nas.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5086705" vertical-offset="2391" max-vertical-offset="3434">
-          <caret line="151" column="0" selection-start-line="151" selection-start-column="0" selection-end-line="151" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.17445482" vertical-offset="2511" max-vertical-offset="3400">
+          <caret line="151" column="26" selection-start-line="151" selection-start-column="26" selection-end-line="151" selection-end-column="26" />
           <folding>
             <element signature="e#1176#1197#0" expanded="true" />
           </folding>
