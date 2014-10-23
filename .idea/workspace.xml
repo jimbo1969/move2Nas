@@ -32,8 +32,8 @@
       <file leaf-file-name="move2Nas.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/move2Nas.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.17445482" vertical-offset="2511" max-vertical-offset="3400">
-              <caret line="151" column="26" selection-start-line="151" selection-start-column="26" selection-end-line="151" selection-end-column="26" />
+            <state vertical-scroll-proportion="0.5451713" vertical-offset="420" max-vertical-offset="3417">
+              <caret line="35" column="115" selection-start-line="35" selection-start-column="115" selection-end-line="35" selection-end-column="115" />
               <folding>
                 <element signature="e#1176#1197#0" expanded="true" />
               </folding>
@@ -394,7 +394,11 @@
       <created>1413950766156</created>
       <updated>1413950766156</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="bugfix for break out of upload loop after two failures">
+      <created>1413955685703</created>
+      <updated>1413955685703</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -799,8 +803,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/move2Nas.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.17445482" vertical-offset="2511" max-vertical-offset="3400">
-          <caret line="151" column="26" selection-start-line="151" selection-start-column="26" selection-end-line="151" selection-end-column="26" />
+        <state vertical-scroll-proportion="0.5451713" vertical-offset="420" max-vertical-offset="3417">
+          <caret line="35" column="115" selection-start-line="35" selection-start-column="115" selection-end-line="35" selection-end-column="115" />
           <folding>
             <element signature="e#1176#1197#0" expanded="true" />
           </folding>

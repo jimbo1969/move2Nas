@@ -32,7 +32,8 @@ s = None
 def upload(file):
     global s
     try:
-        s.put(file, confirm=True)  # upload the file & confirm size
+        s.put(file, confirm=False)  # upload the file & do not call stat() on it when finished to confirm filesize
+                                    # note that stat() on a file that cannot be reached causes system lock on my pi
     except IOError as e:  # IOError is raised if the filesize does not match upon completion of put() with confirm=True
         emsg = "I/O error uploading '{}' ({}): {}".format(file, e.errno, e.strerror)
         print(emsg)
