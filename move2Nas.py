@@ -147,7 +147,8 @@ def main(host, user, password, source_folder, destination_folder='', **kwargs):
                     break
     finally:
         logging.info('closing sftp connection')
-        s.close()
+        if s is not None:
+            s.close()
 
 
 if __name__ == "__main__":
